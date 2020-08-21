@@ -16,6 +16,7 @@ namespace AliParser
         public Form1()
         {
             InitializeComponent();
+            cbFrom.SelectedItem = "Aliexpress";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,8 +71,8 @@ namespace AliParser
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //string response = Aliexpress.GetPage(txtUrl.Text);
-            string response = Aliexpress.GetPage("https://www.avito.ru/moskva/mototsikly_i_mototehnika?cd=1&radius=0");
+            string response = Aliexpress.GetPage(txtUrl.Text);
+            //string response = Aliexpress.GetPage("https://www.avito.ru/moskva/mototsikly_i_mototehnika?cd=1&radius=0");
             string parsing = Aliexpress.ParsTover(response);
             rtbLog.Text = parsing;
             

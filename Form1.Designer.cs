@@ -45,6 +45,7 @@
             this.rbtnPages = new System.Windows.Forms.RadioButton();
             this.rbtnAllPage = new System.Windows.Forms.RadioButton();
             this.Log = new System.Windows.Forms.GroupBox();
+            this.cbFrom = new System.Windows.Forms.ComboBox();
             this.Link.SuspendLayout();
             this.Settings.SuspendLayout();
             this.ParsSetting.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             // Settings
             // 
+            this.Settings.Controls.Add(this.cbFrom);
             this.Settings.Controls.Add(this.brnStop);
             this.Settings.Controls.Add(this.btnStart);
             this.Settings.Controls.Add(this.ParsSetting);
@@ -124,9 +126,9 @@
             this.ParsSetting.Controls.Add(this.numericUpDown1);
             this.ParsSetting.Controls.Add(this.rbtnPages);
             this.ParsSetting.Controls.Add(this.rbtnAllPage);
-            this.ParsSetting.Location = new System.Drawing.Point(0, 19);
+            this.ParsSetting.Location = new System.Drawing.Point(0, 60);
             this.ParsSetting.Name = "ParsSetting";
-            this.ParsSetting.Size = new System.Drawing.Size(188, 331);
+            this.ParsSetting.Size = new System.Drawing.Size(188, 290);
             this.ParsSetting.TabIndex = 0;
             this.ParsSetting.TabStop = false;
             this.ParsSetting.Text = "Парсить указанную страницу";
@@ -254,6 +256,18 @@
             this.Log.TabStop = false;
             this.Log.Text = "Лог [..]";
             // 
+            // cbFrom
+            // 
+            this.cbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFrom.FormattingEnabled = true;
+            this.cbFrom.Items.AddRange(new object[] {
+            "Aliexpress",
+            "Avito"});
+            this.cbFrom.Location = new System.Drawing.Point(7, 20);
+            this.cbFrom.Name = "cbFrom";
+            this.cbFrom.Size = new System.Drawing.Size(175, 21);
+            this.cbFrom.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +313,7 @@
         private System.Windows.Forms.RadioButton rbtnRange;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox cbFrom;
     }
 }
 
